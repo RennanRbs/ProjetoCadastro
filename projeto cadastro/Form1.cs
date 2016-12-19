@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace projeto_cadastro
 {
@@ -25,14 +27,7 @@ namespace projeto_cadastro
             Bolsista bolsa = new Bolsista();
 
                 
-           // MessageBox.Show("Nome do Bolsista: " + bolsa.Nome ,"Cadastro Aluno");
-            //MessageBox.Show("RG do Bolsista: " + bolsa.RG, "Cadastro Aluno");
-            //MessageBox.Show("CPF do Bolsista: " + bolsa.CPF, "Cadastro Aluno");
-            //MessageBox.Show("endereço do Bolsista: " + bolsa.Endereço, "Cadastro Aluno");
-            //MessageBox.Show("Cep do Bolsista: " + bolsa.Cep, "Cadastro Aluno");
-            //MessageBox.Show(" matricula do Bolsista: " + bolsa.Matricula, "Cadastro Aluno");
-            //MessageBox.Show("telefone Celular do Bolsista: " + bolsa.Celular, "Cadastro Aluno");
-            //MessageBox.Show("   telefone fixo do Bolsista: " + bolsa.Telefone, "Cadastro Aluno");
+         
 
 
 
@@ -86,11 +81,7 @@ namespace projeto_cadastro
 
 
                 MessageBox.Show("bolsista encontrado");
-                // entradanome.AppendText(Arquivo) ;
-                //entradanome.AppendText("C:\\Users\\Rennan\\Desktop\\Alunos cadastro\\" + Arquivo + ".txt");
-              
-                //entrada.Close();
-               // leitor.Close();
+                
 
             }
             else { MessageBox.Show("Bolsista  Não encotrado"); }
