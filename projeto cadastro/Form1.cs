@@ -26,8 +26,9 @@ namespace projeto_cadastro
         {
             Bolsista bolsa = new Bolsista();
 
-                
-         
+            SqlConnection comando = new SqlConnection("Data Source=JARVIS-RENNAN;Initial Catalog=Projetocadastro;Integrated Security=True");
+            string pessoa = "INSER INTO Pessoa(Nome,Cpf,Celular,Email)VALUES(@nome,@cpf,@celular,@email)";
+            string bolsista = "INSERT INTO Bolsista(Endereço,Bairro,Rg,Cep.Telefone,Curso,Matricula)VALUES(@endereço,@bairro,@rg,@cep,@telefone,@curso,@matriculaq)";
 
 
 
