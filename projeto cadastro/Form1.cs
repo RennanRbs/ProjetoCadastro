@@ -24,15 +24,6 @@ namespace projeto_cadastro
         {
             Bolsista bolsa = new Bolsista();
 
-           // bolsa.ReceberNome("Rennan Rebouças");
-            //bolsa.ReceberMatricula(20162015020458);
-            //bolsa.ReceberTelefoneCel(999305878);
-            //bolsa.ReceberTelefoneFixo("nada");
-            //bolsa.Receberbairro("Guararapes");
-            //bolsa.ReceberCpf(00000000000);
-            //bolsa.ReceberRg(0000000000);
-            //bolsa.ReceberCep(60123456);
-            //bolsa.ReceberEndereço("Porto das dunas n100 ");
                 
            // MessageBox.Show("Nome do Bolsista: " + bolsa.Nome ,"Cadastro Aluno");
             //MessageBox.Show("RG do Bolsista: " + bolsa.RG, "Cadastro Aluno");
