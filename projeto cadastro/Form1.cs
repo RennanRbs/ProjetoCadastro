@@ -42,6 +42,9 @@ namespace projeto_cadastro
             //MessageBox.Show(" matricula do Bolsista: " + bolsa.Matricula, "Cadastro Aluno");
             //MessageBox.Show("telefone Celular do Bolsista: " + bolsa.Celular, "Cadastro Aluno");
             //MessageBox.Show("   telefone fixo do Bolsista: " + bolsa.Telefone, "Cadastro Aluno");
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
