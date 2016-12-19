@@ -26,9 +26,7 @@ namespace projeto_cadastro
         {
             Bolsista bolsa = new Bolsista();
 
-            SqlConnection comando = new SqlConnection("Data Source=JARVIS-RENNAN;Initial Catalog=Projetocadastro;Integrated Security=True");
-            string pessoa = "INSER INTO Pessoa(Nome,Cpf,Celular,Email)VALUES(@nome,@cpf,@celular,@email)";
-            string bolsista = "INSERT INTO Bolsista(Endereço,Bairro,Rg,Cep.Telefone,Curso,Matricula)VALUES(@endereço,@bairro,@rg,@cep,@telefone,@curso,@matriculaq)";
+            
 
 
 
@@ -36,6 +34,29 @@ namespace projeto_cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            try {
+
+                SqlConnection comando = new SqlConnection("Data Source=JARVIS-RENNAN;Initial Catalog=Projetocadastro;Integrated Security=True");
+                string pessoa = "INSER INTO Pessoa(Nome,Cpf,Celular,Email)VALUES(@nome,@cpf,@celular,@email)";
+                string bolsista = "INSERT INTO Bolsista(Endereço,Bairro,Rg,Cep.Telefone,Curso,Matricula)VALUES(@endereço,@bairro,@rg,@cep,@telefone,@curso,@matriculaq)";
+                string bolsistaRemunerado = "INSERT INTO BolsistaRemunerado(Agencia,Conta,Orientador,FonteBolsta)VALUES(@agencia,@conta,@orientador,@fontebolsa)";
+                string professor = "INSERT INTO Professor(Projeto)VALUES(@projeto)";
+
+
+                SqlCommand cmd = new SqlCommand(pessoa, comando);
+                cmd.Parameters.Add(new SqlParameter("@nome",this.entradanome.Text));
+                comando.Open();
+               // cmd.ExecuteNonQuery();
+                comando.Close();
+
+            }
+            finally { }
+
+
+
+
+
             string Arquivo;
             Stream saida = File.Open("entrada.txt", FileMode.Create);
             StreamWriter escritor = new StreamWriter(saida);
@@ -55,7 +76,7 @@ namespace projeto_cadastro
             Arquivo = entradaid.Text;
 
             MessageBox.Show("Bolsista Salvo ");
-            File.Copy("entrada.txt", "C:\\Users\\Rennan\\Desktop\\Alunos cadastro\\"+Arquivo + ".txt" );
+            File.Copy("C:\\Users\\Rennan\\Documents\\Visual Studio 2015\\Projects\\projeto cadastro\\projeto cadastro\\bin\\Debug\\entrada.txt", "C:\\Users\\Rennan\\Desktop\\Alunos cadastro\\"+Arquivo + ".txt" );
         }
 
        
@@ -74,7 +95,6 @@ namespace projeto_cadastro
                     linhas[i] = sr.ReadLine();}
 
                 sr.Close();
-                entradamatricula.Clear();
                 entradamatricula.AppendText(linhas[2]);
                 entradaendereço.AppendText(linhas[3]);
                 entradanome.AppendText(linhas[1]);
